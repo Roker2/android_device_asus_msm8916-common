@@ -144,16 +144,13 @@ PRODUCT_PACKAGES += \
     libshims_camera \
     Snap
 
-PRODUCT_PACKAGES += \
-    Snap
-
 # Connectivity Engine support
 PRODUCT_PACKAGES += \
     libcnefeatureconfig
 
 # Doze
 PRODUCT_PACKAGES += \
-   ZenfoneDoze
+    ZenfoneDoze
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -254,7 +251,7 @@ PRODUCT_PACKAGES += \
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \
-    init.qcom.opengles.sh \
+    init.qcom.bt.sh \
     init.qcom.power.sh \
     init.qcom.factory.sh
 
