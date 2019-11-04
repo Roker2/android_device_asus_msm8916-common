@@ -150,7 +150,7 @@ PRODUCT_PACKAGES += \
 
 # Doze
 PRODUCT_PACKAGES += \
-    ZenfoneDoze
+   ZenfoneDoze
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -208,8 +208,9 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0-service
 
 # Keystore
-PRODUCT_PACKAGES += \
-    keystore.msm8916
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/keystore/lib/hw/keystore.msm8916.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/keystore.msm8916.so \
+    $(LOCAL_PATH)/keystore/lib64/hw/keystore.msm8916.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/keystore.msm8916.so
 
 # Light
 PRODUCT_PACKAGES += \
@@ -306,10 +307,13 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     textclassifier.smartselection.bundle1
 
+<<<<<<< HEAD
 # Thermal
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/thermal/thermal-engine-8916.conf:system/etc/thermal-engine-8916.conf
 
+=======
+>>>>>>> b973e16cea58ae5d790319ae0c99c854ece75c5a
 # USB HAL
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service \

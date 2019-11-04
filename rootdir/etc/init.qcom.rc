@@ -817,10 +817,11 @@ service perfd /vendor/bin/perfd
     group root
     disabled
 
-service thermal-engine /vendor/bin/thermal-engine
-    class main
-    user root
-    group root
+#service thermal-engine /vendor/bin/thermal-engine
+#    class main
+#    user root
+#    group root
+#    writepid /dev/cpuset/system-background/tasks
 
 service time_daemon /vendor/bin/time_daemon
     class late_start
@@ -885,6 +886,9 @@ on property:sys.boot_completed=1
     write /proc/driver/audio_debug ${sys.uart.enable}
 
     start spk_calibration
+
+    # Enable Tap-To-Wake
+    write /sys/devices/soc.0/78b9000.i2c/i2c-5/5-0038/dclick_mode 1
 
 on property:vold.decrypt=trigger_restart_framework
     stop camera-provider-2-4
