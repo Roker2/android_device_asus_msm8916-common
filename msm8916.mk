@@ -307,13 +307,10 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     textclassifier.smartselection.bundle1
 
-<<<<<<< HEAD
 # Thermal
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/thermal/thermal-engine-8916.conf:system/etc/thermal-engine-8916.conf
 
-=======
->>>>>>> b973e16cea58ae5d790319ae0c99c854ece75c5a
 # USB HAL
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service \
